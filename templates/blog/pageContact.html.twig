@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+{% block section %}{% endblock %}
+{% block body %}
+ 
+    <h1>Contact</h1>
+    
+    {{form_start(form)}}
+                   
+        {{form_row(form.name, {'label': 'Nom', 'attr':{'placeholder':'Votre nom...'}})}}
+        {{form_row(form.email, {'label': 'Adresse email', 'attr':{'placeholder':'Vore adresse email...'}})}}
+        {{form_row(form.subject, {'label': 'Sujet', 'attr':{'placeholder':'Sujet de votre demande...'}})}}
+        {{form_row(form.message, {'label': 'Message', 'attr':{'placeholder':'Votre message...'}})}}
+                  
+    <button type="submit" class="btn btn-success">Envoyé!</button>
+    {{form_end(form)}}
+    
+{% endblock %}

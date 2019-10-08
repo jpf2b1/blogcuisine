@@ -1,0 +1,27 @@
+{{ form_start(form,{'attr': {'class': 'form-group recetteforme'}}) }}
+{{ form_row(form.titre, {'attr':{'placeholder':'Indiquer le titre de votre recette'}}) }}
+
+{# {{ form_row(form.nom) }} #}
+
+{# {{ form_widget(form.auteur) }} #}
+<label for="recette_titre">liste Ingredients</label>
+<div class="listeIngredient">   
+    {# <h5>liste ingredients</h5> #}
+    <div class="list-group groupeIngredient">
+        <input type="text" name="ingredient[]" placeholder="ingrédient">
+        <input type="text" name="quantite[]" placeholder="quantité">
+        <input type="text" name="unite[]" placeholder="unité">
+        <button class="suppIngredient">supprimer</button>
+    </div>
+</div>
+
+<div>
+<button class="ajouterIngredient btn btn-secondary">Ajouter 1 Ingredient</button>
+</div>
+
+{{ form_row(form.categorie, {'attr':{'placeholder':'Indiquer le type de recette'}}) }}
+{{ form_widget(form) }}
+{#{{ form_row(form.preparation, {'attr':{'placeholder':'Indiquer le type de recette'}}) }}#}
+{#{{ form_row(form.FichierImage, {'attr':{'placeholder':'Indiquer le titre de votre recette'}}) }}#}
+<button class="btn btn-success">{{ button_label|default('Save') }}</button>
+{{ form_end(form) }}

@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Auteur{% endblock %}
+{% block section %}{% endblock %}
+{% block body %}
+    <h1>Auteur</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ auteur.id }}</td>
+            </tr>
+            <tr>
+                <th>Pseudo</th>
+                <td>{{ auteur.pseudo }}</td>
+            </tr>
+            <tr>
+                <th>Actif</th>
+                <td>{{ auteur.actif ? 'Yes' : 'No' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <button class="btn btn-success"><a href="{{ path('auteur_index') }}">back to list</a></button>
+
+    <button class="btn btn-success"><a href="{{ path('auteur_edit', {'id': auteur.id}) }}">edit</a></button>
+
+    {{ include('auteur/_delete_form.html.twig') }}
+{% endblock %}

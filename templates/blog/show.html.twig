@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+{% block section %}{% endblock %}
+{% block body %}
+<h1>{{recette.titre}}</h1>
+
+
+  <h5>Auteur : 
+  {% if (recette.auteur is not null) %}
+    <span class="text-danger">{{recette.auteur.username | capitalize}}</span>
+  {% endif %}
+  </h5>
+
+  <h5>Ingredients :</h5>
+ 
+  <ul>
+  {% for unites in recette.quantite %}
+    <li><strong class="text-primary">{{ unites.ingredient.nom | capitalize }}</strong> : {{ unites.nombre }} {{ unites.unite }}    </li>
+  {% endfor %}
+  </ul>
+
+    <div class="row mb-2">
+          
+        <div class="col-md-12">
+          {# <div class="card flex-md-row mb-4 shadow-sm h-md-250"> #}
+            <div class="card-body d-flex flex-column align-items-start">
+              <strong class="d-inline-block tpspreparation mb-2 text-primary">Temps de préparation : {{ recette.tempsPreparation | date('H:i:s')}}</strong>
+              {# <h3 class="mb-0 titre1recette">
+                <a class="text-dark" href="#">{{recette.titre}}</a>
+              </h3> #}
+              <div class="mb-1 date1recette text-muted">Nov 12</div>
+              <img class="card-img-right img1recette flex-auto d-none d-lg-block" src="{{ asset('upload/' ~ recette.image) }}" alt="Card image cap">
+              <p>{{ recette.preparation | nl2br }}</P>
+            </div>
+            
+          </div>
+        </div>
+    </div>
+{% endblock %}

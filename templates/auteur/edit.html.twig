@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Auteur{% endblock %}
+{% block section %}{% endblock %}
+{% block body %}
+    <h1>Edit Auteur</h1>
+
+    {{ include('auteur/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <button class="btn btn-success"><a href="{{ path('auteur_index') }}">back to list</a></button>
+
+    {{ include('auteur/_delete_form.html.twig') }}
+{% endblock %}

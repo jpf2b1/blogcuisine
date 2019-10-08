@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}MonBlogCuisine{% endblock %}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }} "> {% block stylesheets %}{% endblock %}
+</head>
+{# style="background-image: url(../public/assets/img/imgfonts/wood-2142241.jpg)!important;" #}
+<body  >
+    {% block header %}
+    <div class="pos-f-t">
+        <div class="" id="navbarToggleExternalContent";>
+            <div class="bg-dark p-4">
+                {#<h4 class="text-white">MonBlogCuisine</h4>#}
+
+
+{#-----------------------------------------------------------------------slider----------------------------------------------------------------------------#}
+                <div class="carousel slide carousel-fade" data-ride="carousel" data-interval="3000" id="carousel-1">
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active"><img class="img-fluid w-100 d-block" src="http://www.madelocalmarkets.com/wp-content/uploads/2018/07/cours-cuisine-grand-chef-unique-splendide-cours-cuisine-toulouse-de-2018-cuisine-blog-of-cours-cuisine-grand-chef.jpg" alt="Slide Image">
+                            <div class="carousel-caption">
+                                <h3 class="animated slideInDown">Mon Blog Cuisine</h3>
+                                <p class="animated slideInLeft">idées audacieuses et créatives pour vos recettes.</p><button class="btn btn-outline-light btn-lg animated slideInUp" type="button">Lire Plus</button></div>
+                        </div>
+                        <div class="carousel-item"><img class="img-fluid w-100 d-block" src="http://www.aubergeducep.com/images/desserts-01.jpg" alt="Slide Image">
+                            <div class="carousel-caption">
+                                <h3 class="animated fadeInDown">Mon Blog Cuisine</h3>
+                                <p class="animated slideInUp">Comment réaliser des plats équilibrés en un minimum de temps.</p><button class="btn btn-outline-light btn-lg animated slideInLeft" type="button">Lire Plus</button></div>
+                        </div>
+                        <div class="carousel-item"><img class="img-fluid w-100 d-block" src="http://www.cuisinemag.fr/wp-content/uploads/2018/01/the-best-damn-vegan-burgers-_-RECIPE-on-hotforfoodblog.jpg" alt="Slide Image">
+                            <div class="carousel-caption">
+                                <h3 class="animated slideInDown">Mon Blog Cuisine</h3>
+                                <p class="animated slideInLeft">plats d'aujourd’hui et demain.</p><button class="btn btn-outline-light btn-lg animated slideInUp" type="button">Lire Plus</button></div>
+                        </div>
+                        <div class="carousel-item"><img class="img-fluid w-100 d-block" src="http://www.lovalinda.fr/wp-content/uploads/2012/03/Le-foie-gras-sur-oignons-LovaLinda-Blog-Cuisine-Recettes-Briouates-Ap%C3%A9ritif-Recettes-de-F%C3%AAtes.jpg" alt="Slide Image">
+                            <div class="carousel-caption">
+                                <h3 class="animated slideInDown">Mon Blog Cuisine</h3>
+                                <p class="animated slideInLeft">tarte au citron comme un expert en 6 étapes.</p><button class="btn btn-outline-light btn-lg animated slideInUp" type="button">Lire Plus</button></div>
+                        </div>
+                        <div class="carousel-item"><img class="img-fluid w-100 d-block" src="http://emilieramenesafraise.fr/wp-content/uploads/2014/11/feuillete-tresse-pomme-poire-2-800x400.jpg" alt="Slide Image">
+                            <div class="carousel-caption">
+                                <h3 class="animated slideInDown">Mon Blog Cuisine</h3>
+                                <p class="animated slideInLeft">5 astuces cuisine d’experts.</p><button class="btn btn-outline-light btn-lg animated slideInUp" type="button">Lire Plus</button></div>
+                        </div>
+                    </div>
+                    <div><a class="carousel-control-prev" href="#carousel-1" role="button" data-slide="prev"><span class="carousel-control-prev-icon"><i class="la la-cutlery"></i></span><span class="sr-only">Previous</span></a><a class="carousel-control-next" href="#carousel-1" role="button" data-slide="next"><span class="carousel-control-next-icon"><i class="la la-cutlery"></i></span><span class="sr-only">Next</span></a></div>
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-1" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-1" data-slide-to="1"></li>
+                        <li data-target="#carousel-1" data-slide-to="2"></li>
+                        <li data-target="#carousel-1" data-slide-to="3"></li>
+                        <li data-target="#carousel-1" data-slide-to="4"></li>
+                    </ol>
+                </div>
+
+
+                {# <span class="text-muted">Toggleable via the navbar brand.</span> #}
+            </div>
+        </div>
+        
+        
+{#--------------------------------------------------------------navbar avec menu--------------------------------------------------------------------------#}
+        <nav class="navbar navbar-dark bg-dark navbar-fixed-top">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="true" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+            {# <a class="nav-link" href="{{ path('home') }}">HOME <span class="sr-only">(current)</span></a> #}
+            <a class="nav-link" href="{{ path('blog') }}">ACCUEIL</a>
+            <a class="nav-link" href="{{ path('recette_new') }}">PUBLIER</a>
+            <a class="nav-link" href="{{ path('security_registration') }}">INSCRIPTION</a>
+            {# <a class="nav-link" href="{{ path('admin_blog') }}">ADMIN</a> #}
+             <a class="nav-link" href="{{ path('blog') }}">À PROPOS</a>
+            <a class="nav-link" href="{{ path('contact') }}">CONTACT</a>
+
+            {# <a class="nav-link" href="{{ path('recette_index') }}">Recettes Index</a> #}
+            {# <a class="nav-link" href="{{ path('user_index') }}">Users Index</a> #}
+
+
+            {# mise en place d'une condition pour que le mm bouton permette connexion et deconexion #}
+            {% if not app.user %}
+            <a class="nav-link" href="{{ path('login') }}"><button class="btn btn-danger">Connexion</button></a>
+            {% else %}
+            <a class="nav-link" href="{{ path('logout') }}"><button class="btn btn-success">Deconnexion</button></a>
+            {% endif %}
+            {# -------------------------------------------------------------------------------------------------- #}
+
+        </nav>
+    </div>
+    {% endblock %}
+
+{% block section %}    
+{# ---------------------------------------------------Test de bandeau d'accueil------------------------------------------------------------------------------- #}
+
+
+
+    {# <div class="jumbotron">
+      <div class="container">
+        <h1 class="display-3">Bienvenue sur Mon Blog Cuisine!</h1>
+        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Lire Plus &raquo;</a></p>
+      </div>
+    </div> #}
+
+
+{# ---------------------------------------------------FIN Test de bandeau d'accueil------------------------------------------------------------------------------- #}
+{% endblock %}
+{#-------------------------------------------------------------------body----------------------------------------------------------------------------------#}
+    <div class="container">
+        {% block body %}{% endblock %}
+    </div>
+    
+    
+
+{#---------------------------------------------------------------------footer-------------------------------------------------------------------------------#}
+    {% block footer %}
+    <footer class="page-footer font-small bg-dark fixed-bottom">
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center bg-dark py-5 fixed-bottom"><a href="#"> Mentions Légal  </a>  © 2018 Copyright :
+            {# <a href="#">-Mentions Légal-</a> #}
+            <a href="#"> MonBlogCuisine.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    {% endblock %} 
+    {% block javascripts %}
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script id="bs-live-reload" data-sseport="4859" data-lastchange="1530918619334" src="/js/livereload.js"></script>
+    {% endblock %}
+
+     {% block javascriptsperso %}
+     {% endblock %}
+
+</body>
+
+</html>

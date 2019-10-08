@@ -1,0 +1,66 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Recette{% endblock %}
+{% block section %}{% endblock %}
+{% block body %}
+    <h1>Recette</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ recette.id }}</td>
+            </tr>
+
+            <tr>
+                <th>Auteur</th>
+                <td>{{ recette.auteur.username }}</td>
+            </tr> 
+
+
+            <tr>
+                <th>Titre</th>
+                <td>{{ recette.titre }}</td>
+            </tr>
+
+             <tr>
+                <th>Ingredient</th>
+                <td>
+                    <ul>
+                    {% for unites in recette.quantite %}
+                        <li><strong class="text-primary">{{ unites.ingredient.nom | capitalize }}</strong> : {{ unites.nombre }} {{ unites.unite }}    </li>
+                    {% endfor %}
+                    </ul>        
+                </td>
+            </tr>           
+
+            <tr>
+                <th>TempsPreparation</th>
+                <td>{{ recette.tempsPreparation ? recette.tempsPreparation|date('H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Preparation</th>
+                <td>{{ recette.preparation }}</td>
+            </tr>
+            <tr>
+                <th>Image</th>
+                <td><img src="{{ asset('upload/' ~ recette.image) }}"></img></td>
+            </tr>
+            <tr>
+                <th>Categorie</th>
+                <td>{{ recette.categorie }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <button class="btn btn-primary"><a href="{{ path('recette_index') }}">back to list</a></button>
+
+    <button class="btn btn-warning"><a href="{{ path('recette_edit', {'id': recette.id}) }}">edit</a></button>
+
+    {{ include('recette/_delete_form.html.twig') }}
+{% endblock %}
+
+
+
+
+{#<button class="btn btn-danger">Delete</button>#}

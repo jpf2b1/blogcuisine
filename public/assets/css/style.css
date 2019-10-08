@@ -1,0 +1,551 @@
+body{
+  background-image: url(../public/assets/img/imgfonts/wood-2142241.jpg)!important;
+  background-repeat: space;
+  background-position: center;
+  background-size: cover;
+}
+
+body > div.container >body > div.container >.imghome > img{
+  max-width: 25rem;
+}
+
+
+body > div.container > div > div > div > img{
+  min-width: 25rem;
+}
+
+
+.groupeIngredient{
+  margin-bottom: 1rem;
+}
+
+
+.card-text{
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.card-body > .card-img-right{
+  max-height: 25rem;
+  /* margin: 0 auto; */
+  margin-bottom: 3rem;
+}
+
+.tpspreparation{
+  margin: 0 auto;
+}
+
+.titre1recette{
+  margin: 0 auto;
+}
+
+.date1recette{
+  margin: 0 auto;
+}
+
+.img1recette{
+  margin: 0 auto;
+}
+
+
+
+.container{
+  margin-top: 5rem;
+  margin-bottom: 10rem;
+}
+
+div > .p-4 {
+  padding: 0rem!important;
+}
+
+
+
+body > div.container > form{
+  background-color: rgba(255,255,255, 0.5);
+  padding: 2rem;
+  font-weight: bold;
+}
+
+
+img.card-img-right{
+  background-size:cover;
+  background-origin:content-box;
+  border:1px solid;
+}
+
+body > div.container > .admintable{
+  border: 20px solid black;
+}
+
+.titleadmin{
+  margin-bottom: 3rem;
+}
+
+body > div.container > table > tbody > tr:nth-child(4) > td > img{
+  width:200px;
+}
+
+body > div.container > table > tbody > tr > td > button.adminbt{
+  margin: 0 auto;
+  text-align: center;
+}
+
+body > div.container > table > tbody > tr > td.adminbt{
+  text-align: center;
+}
+
+
+body > div.container > table > thead > .admintr{
+  text-align: center;
+  border: 20px solid black;
+}
+
+
+
+.recetteforme{
+  border:0.3rem dashed;
+  padding:2rem;
+  font-weight:bold;
+  max-width: 50rem;
+  margin: 0 auto;
+  margin-top: 4rem;
+}
+
+
+.recetteforme > div{
+  margin-bottom: 1rem;
+}
+
+body > div.container > form:nth-child(4) > button{
+  display: block;
+}
+
+
+/* body > div.container > table > tbody > tr > td,th{
+  border: 3px double;
+} */
+
+
+
+body > div.container > table{
+  border: 3px double;
+}
+
+
+.btrecetteforme{
+   margin: 0 auto;
+   margin-top: 2rem;
+}
+
+body > div.container > form > button.creat{
+  margin-top: 1rem;
+}
+
+body > div.container > button.btcreatindex{
+  margin: 2rem auto;
+
+}
+
+body > div.container > button{
+  min-width: 8rem;
+  color: white;
+  display: block;
+  margin-bottom: 0.5rem;
+  
+}
+
+
+body > div.container > button > a{
+  color: white;
+  text-decoration: none;
+}
+
+
+body > div.container > form > button{
+  min-width: 8rem;
+}
+
+body > div.container > table > tbody > tr > td > button{
+  min-width: 8rem;
+  color: white;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+
+body > div.container > table > tbody > tr > td > button > a{
+  color: white;
+  text-decoration: none;  
+}
+
+
+body > div.container > table > tbody > tr > td > img{
+  width:200px;
+}
+
+
+/* body > div.pos-f-t > nav > a > button{
+  width:6rem;
+} */
+
+
+
+body > div.container > section > div > div{
+  margin: 0 auto 0 auto;
+}
+
+
+
+body > div.pos-f-t > nav > a{
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+    text-decoration: none;
+    font-size: 1.5em;
+    color: white;
+}
+
+body > div.container > h1{
+  text-align: center;
+}
+
+body > div.container > section > div > div > div > form > button{
+  margin-top: 1rem;
+}
+
+
+
+.navbar {
+    justify-content: space-between;
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+    text-decoration: none;
+}
+
+.navbar > button {
+  justify-content: flex-end;
+}
+
+/* .navbar > a {
+  justify-content: flex-start;
+} */
+
+
+.carousel-fade .carousel-item {
+  height:41em;
+}
+
+.carousel-fade .carousel-item img {
+  height:100vh;
+  width:100%;
+  max-width:100%;
+  background-size:cover;
+  background-origin:content-box;
+  background-clip:content-box;
+  background-position:top;
+  color:rgba(0,0,0,0.56);
+  filter:brightness(60%);
+  right:0;
+  left:0;
+  resize:both;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  background:none;
+  border:2px solid #fff;
+  height:60px;
+  width:60px;
+  line-height:55px;
+  opacity:9 !important;
+  filter:brightness(100%) !important;
+  font-size:40px;
+  border-radius:100%;
+}
+
+.carousel-control-prev-icon:hover, .carousel-control-next-icon:hover {
+  background:#fff;
+  opacity:9;
+  color:#000;
+}
+
+.la {
+  opacity:99;
+  z-index:1;
+  position:relative;
+}
+
+.carousel-indicators li {
+  background:#000;
+  color:#000;
+  height:30px;
+  width:30px;
+  margin:5px !important;
+  border-radius:100%;
+}
+
+.carousel-caption {
+  top:220px;
+}
+
+@media (min-width: 992px) {
+  .carousel-caption {
+    top:220px !important;
+  }
+  
+}
+
+.carousel-caption h3 {
+  font-size:70px;
+  text-align:center;
+  font-weight:bold;
+}
+
+@media (min-width: 992px) {
+  .carousel-caption h3 {
+    font-size:70px !important;
+    text-align:center;
+    font-weight:bold;
+  }
+}
+
+.carousel-caption p {
+  font-size:30px;
+  margin-top:20px;
+  text-align:center;
+}
+
+@media (min-width: 992px) {
+  .carousel-caption p {
+    font-size:30px !important;
+    margin-top:20px;
+    text-align:center;
+  }
+}
+
+.carousel-caption .btn {
+  border:2px solid #fff;
+  border-radius:0;
+}
+
+@media (min-width: 300px) {
+  .img-fluid.w-100.d-block {
+    height:auto;
+  }
+  
+
+  /* .p-4 {
+    padding: 0rem!important;
+    max-height: 220px;
+  } */
+}
+
+
+
+@media (max-width: 700px) {
+  div > .p-4 {
+    max-height: 14rem;
+    padding: 0rem!important;
+  }
+  .carousel-control-prev, .carousel-indicators{
+    visibility: hidden;
+  }
+}
+
+
+
+
+
+@media (min-width: 576px) {
+  .img-fluid.w-100.d-block {
+    height:auto;
+  }
+
+}
+
+@media (min-width: 768px) {
+  .img-fluid.w-100.d-block {
+    height:auto;
+  }
+  
+  
+}
+
+@media (min-width: 992px) {
+  .img-fluid.w-100.d-block {
+    height:100vh;
+  }
+}
+
+@media (min-width: 300px) {
+  .carousel-caption {
+    top:0;
+    font-size:20px;
+  }
+}
+
+@media (min-width: 300px) {
+  .carousel-caption h3 {
+    font-size:20px;
+  }
+}
+
+.carousel-caption p {
+  font-size:15px;
+}
+
+@media (min-width: 768px) {
+  .carousel-caption {
+    top:100px;
+  }
+}
+
+@media (min-width: 768px) {
+  .carousel-caption h3 {
+    font-size:40px;
+  }
+}
+
+
+@media (max-width: 900px) {
+  
+  .navbar {
+    flex-direction: column;
+
+  }
+}
+
+
+
+
+/* stylelint-disable selector-list-comma-newline-after */
+
+.blog-header {
+  line-height: 1;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.blog-header-logo {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  font-size: 2.25rem;
+}
+
+.blog-header-logo:hover {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+}
+
+.display-4 {
+  font-size: 2.5rem;
+}
+@media (min-width: 768px) {
+  .display-4 {
+    font-size: 3rem;
+  }
+}
+
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
+  text-align: center;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.nav-scroller .nav-link {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  font-size: .875rem;
+}
+
+.card-img-right {
+  height: 100%;
+  border-radius: 0 3px 3px 0;
+}
+
+.flex-auto {
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.h-250 { height: 250px; }
+@media (min-width: 768px) {
+  .h-md-250 { height: 250px; }
+}
+
+/*
+ * Blog name and description
+ */
+.blog-title {
+  margin-bottom: 0;
+  font-size: 2rem;
+  font-weight: 400;
+}
+.blog-description {
+  font-size: 1.1rem;
+  color: #999;
+}
+
+@media (min-width: 40em) {
+  .blog-title {
+    font-size: 3.5rem;
+  }
+}
+
+/* Pagination */
+.blog-pagination {
+  margin-bottom: 4rem;
+}
+.blog-pagination > .btn {
+  border-radius: 2rem;
+}
+
+/*
+ * Blog posts
+ */
+.blog-post {
+  margin-bottom: 4rem;
+}
+.blog-post-title {
+  margin-bottom: .25rem;
+  font-size: 2.5rem;
+}
+.blog-post-meta {
+  margin-bottom: 1.25rem;
+  color: #999;
+}
+
+/*
+ * Footer
+ */
+.blog-footer {
+  padding: 2.5rem 0;
+  color: #999;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-top: .05rem solid #e5e5e5;
+}
+.blog-footer p:last-child {
+  margin-bottom: 0;
+}
+
+footer{
+  color: #f9f9f9;
+  text-decoration:none;
+}
+
+
+
+
+

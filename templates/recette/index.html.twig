@@ -1,0 +1,66 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Recette index{% endblock %}
+{% block section %}{% endblock %}
+{% block body %}
+    <h1>Recette index</h1>
+
+    <button class="btn btn-success btcreatindex"><a href="{{ path('recette_new') }}">Create new</a></button>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Auteur</th>
+                <th>Titre</th>
+{# ------------------------------------------------- #}
+                <th>Ingredient</th>
+{# ------------------------------------------------- #}
+                <th>TempsPreparation</th>
+                <th>Preparation</th>
+                <th>Image</th>
+                <th>Categorie</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for recette in recettes %}
+            <tr>
+                <td>{{ recette.id }}</td>
+
+{# ------------------------------------------------------------------------ #}
+                <td>{{ recette.auteur.username }}</td>
+{# ------------------------------------------------------------------------ #}
+
+                <td>{{ recette.titre }}</td>
+
+{# ------------------------------------------------- #}
+                <td>
+                    <ul>
+                    {% for unites in recette.quantite %}
+                        <li><strong class="text-primary">{{ unites.ingredient.nom | capitalize }}</strong> : {{ unites.nombre }} {{ unites.unite }}    </li>
+                    {% endfor %}
+                    </ul>        
+                </td>
+{# ------------------------------------------------- #}
+
+                <td>{{ recette.tempsPreparation ? recette.tempsPreparation|date('H:i:s') : '' }}</td>
+                <td>{{ recette.preparation }}</td>
+                
+                <td><img src="{{ asset('upload/' ~ recette.image) }}"></img></td>
+                <td>{{ recette.categorie }}</td>
+                <td>
+                    <button class="btn btn-primary"><a href="{{ path('recette_show', {'id': recette.id}) }}">show</a></button>
+                    <button class="btn btn-warning"><a href="{{ path('recette_edit', {'id': recette.id}) }}">edit</a></button>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    
+{% endblock %}

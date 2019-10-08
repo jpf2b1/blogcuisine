@@ -1,0 +1,91 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Recette{% endblock %}
+{% block section %}{% endblock %}
+{% block body %}
+    <h1>Creates new Recette</h1>
+
+    {{ include('recette/_form.html.twig') }}
+
+    <!-- <button class="btn btn-primary btrecetteforme"><a href="{{ path('recette_index') }}">back to list</a></button> -->
+{% endblock %}
+
+{% block javascriptsperso %}
+
+
+    <script>
+        var codeHtml = 
+                    `
+                    <div class="list-group groupeIngredient">
+                        <input type="text" name="ingredient[]" placeholder="ingrédient">
+                        <input type="text" name="quantite[]" placeholder="quantité">
+                        <input type="text" name="unite[]" placeholder="unité">
+                    <button class="suppIngredient">supprimer</button>
+                    </div>
+                    `;
+
+                $(function()
+                {
+
+                    //---------------------------------------------------------------------------------------------   
+                        // CETTE FONCTION SERA APPELEE PAR JQUERY QUAND LA PAGE SERA PRETE
+                        
+                        // JE VEUX QUE QUAND LE VISITEUR CLIQUE SUR LE BOUTON
+                        // ON CREE UN CHAMP INPUT EN PLUS
+                        $("button.ajouterIngredient").on("click", function(event)
+                            {
+                                // BLOQUER LE COMPORTEMENT PAR DEFAUT
+                                event.preventDefault();
+                                
+                                //console.log("TU AS CLIQUE");
+                            
+                                // http://api.jquery.com/append/
+                                // AJOUTER UN CODE HTML A LA FIN DU CONTAINER
+                                $(".listeIngredient").append(codeHtml);     
+                            }); 
+                    //---------------------------------------------------------------------------------------------
+
+
+                    //---------------------------------------------------------------------------------------------
+                        // J'INSTALLE LE onCLick SUR UNE BALISE QUI EST PRESENTE ET QUI SERA TOUJOURS LA
+                        // ET ENSUITE JE VAIS FILTRER SUR LA CIBLE REELLE (target) DU CLICK
+                        $("div.listeIngredient").on("click", function (event)
+                        {
+
+                                // BLOQUER LE COMPORTEMENT PAR DEFAUT
+                                event.preventDefault();
+
+                                // JE VERIFIE SI LA BALISE CLIQUEE CONTIENT LA CLASSE .supprimerIngredient
+                                var testBouton = event.target.classList.contains("suppIngredient");
+
+                                if (testBouton == true)
+                                {
+                                    // ON PEUT SUPPRIMER LA LIGNE div
+                                    // div EST LE PARENT DE button
+                                    var baliseDiv = event.target.parentNode;
+                                    baliseDiv.remove();            
+                                }
+                        });
+                    //---------------------------------------------------------------------------------------------
+
+                    //------------------------------------Autre Methode--------------------------------------------
+                        /*
+                        $("div.listeIngredient").on("click", ".suppIngredient", function (event)
+                        {
+
+                                // BLOQUER LE COMPORTEMENT PAR DEFAUT
+                                event.preventDefault();
+                                //console.log("SUPPRIMER INGREDIENT");
+                                $(this)         // button
+                                    .parent()   // div
+                                    .remove();  // JE REMONTE SUR LA BALISE div ET JE LA SUPPRIME
+                        });    
+                        */
+                    //---------------------------------------------------------------------------------------------
+
+                });            
+    </script>
+
+{% endblock %}
+
+

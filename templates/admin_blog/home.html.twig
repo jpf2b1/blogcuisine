@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+{% block section %}{% endblock %}
+{% block body %}
+
+<h1 class="titleadmin">Page Admin</h1>
+
+
+<table class="table table-dark admintable">
+  <thead>
+    <tr class="admintr">
+     
+      <th scope="col">Admin Auteurs</th>
+      <th scope="col">Admin Recettes</th>
+      <th scope="col">Admin Mots de Passes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      
+      <td><button class="btn btn-success adminbt"><a href="{{ path('auteur_index') }}">Modifier</a></button></td>
+      <td><button class="btn btn-success adminbt"><a href="{{ path('recette_index') }}">Modifier</a></button></td>
+      <td><button class="btn btn-success adminbt"><a href="{{ path('user_index') }}">Modifier</a></button></td>
+    </tr>
+    
+    <tr>      
+      <td class="adminbt">--</td>
+      <td class="adminbt">--</td>
+      <td class="adminbt">--</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+{% endblock %}
+
+{# <button class="btn btn-success"><a href="{{ path('auteur_index') }}">back to list</a></button> #}
